@@ -1,0 +1,65 @@
+.features {
+  background-color: $color-primary;
+
+  grid-column: full-start/full-end;
+  padding: 9rem 0;
+
+  display: grid;
+  grid-template-columns:
+    [full-start] minmax(4rem, 1fr) [center-start] repeat(
+      8,
+      [col-start] minmax(min-content, 15rem) [col-end]
+    )
+    [center-end] minmax(4rem, 1fr) [full-end];
+
+  &__grid {
+    grid-column: center-start/center-end;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(37rem, 1fr));
+    // align-items: center;
+    justify-items: center;
+
+    @media only screen and (max-width: $bp-largest) {
+      grid-column-gap: 3rem;
+      align-items: center;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+      grid-template-rows: repeat(2, 1fr);
+      grid-column: col-start 4 / col-end 5;
+      grid-row-gap: 3rem;
+    }
+    @media only screen and (max-width: $bp-small) {
+      grid-template-rows: min-content max-content;
+    }
+  }
+  &__photo {
+    height: 10rem;
+  }
+  &__img {
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+  }
+  &__text-block {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(6rem, 1fr));
+    grid-column-gap: 6rem;
+    grid-row-gap: 4rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      grid-row: 2/-1;
+
+      grid-row-gap: 2rem;
+    }
+  }
+  &__text-box {
+    // display: grid;
+  }
+  &__text {
+    color: $color-text;
+    font-size: 1.2rem;
+    opacity: 0.7;
+  }
+}

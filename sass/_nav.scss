@@ -1,0 +1,142 @@
+.nav {
+  grid-column: center-start/center-end;
+  padding-top: 5rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media only screen and (max-width: $bp-small) {
+    align-items: center;
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+
+    @media only screen and (max-width: $bp-small) {
+      display: none;
+    }
+  }
+  &__item {
+    &:not(:last-child) {
+      margin-right: 4rem;
+    }
+  }
+  &__link:link,
+  &__link:visited {
+    text-decoration: none;
+    text-transform: capitalize;
+    color: inherit;
+    font-size: 1.5rem;
+    font-weight: 500;
+    display: inline-block;
+    transition: all 0.2s;
+  }
+  &__link:hover,
+  &__link:active {
+    color: $color-btn;
+  }
+
+  // Hamburger Menu
+  &__btn-block {
+    display: none;
+
+    @media only screen and (max-width: $bp-small) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    cursor: pointer;
+    height: 5rem;
+    width: 5rem;
+  }
+  &__btn {
+    display: none;
+    // margin-top: 2rem;
+
+    @media only screen and (max-width: $bp-small) {
+      transition: all 0.2s;
+      background-color: #fff;
+
+      width: 4.5rem;
+      height: 2px;
+      position: relative;
+      display: block;
+
+      &::after,
+      &::before {
+        content: '';
+        display: block;
+        background-color: #fff;
+        width: 4.5rem;
+        height: 2px;
+        transition: all 0.2s;
+      }
+      &::before {
+        position: absolute;
+        top: -1.5rem;
+      }
+      &::after {
+        position: absolute;
+        top: 1.5rem;
+      }
+    }
+  }
+}
+
+// SLIDER
+.slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 0%;
+  transition: all 0.5s;
+  background-color: $color-primary;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+
+  .list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem;
+
+    &__item {
+      display: inline-block;
+    }
+    &__link:link,
+    &__link:visited {
+      font-size: 2rem;
+      color: $color-text;
+      display: inline-block;
+      padding: 1rem 2rem;
+      transition: all 0.3s;
+      text-decoration: none;
+      margin-bottom: 2rem;
+    }
+    &__link:hover,
+    &__link:active {
+      background-color: $color-dark-green;
+      color: $color-primary;
+    }
+  }
+  &__close {
+    position: absolute;
+    top: 4rem;
+    right: 4rem;
+    text-decoration: none;
+    font-size: 4rem;
+    color: $color-text;
+  }
+}

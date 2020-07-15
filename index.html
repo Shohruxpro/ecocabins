@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EcoCabins</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Rubik:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body class="container">
+    <!-- HEADER PART -->
+    <header class="header">
+      <!-- Content block to use grid -->
+      <div class="content">
+        <nav class="nav">
+          <a href="#" class="nav__logo"
+            ><img
+              src="./img//Logo/Logo horizontal.svg"
+              alt="Logo of the company"
+              class="nav__image"
+          /></a>
+          <ul class="nav__list">
+            <li class="nav__item"><a href="#" class="nav__link">Models</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Market</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Rent</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">News</a></li>
+            <li class="nav__item">
+              <a href="#" class="btn btn--full">Contact</a>
+            </li>
+          </ul>
+
+          <!-- Hamburger Menu -->
+          <div class="nav__btn-block" onclick="slideOpen()">
+            <span class="nav__btn">&nbsp;</span>
+          </div>
+        </nav>
+        <!-- HEADER MAIN PART GRID -->
+        <div class="content__grid">
+          <div class="content__text-box">
+            <p class="content__text">
+              Sustainable small houses
+            </p>
+            <h1 class="heading-primary">
+              An ecologically friendly house which is built from sustainable
+              natural materials
+            </h1>
+          </div>
+          <div class="content__btn-box">
+            <a href="#" class="content__btn">Watch video</a>
+          </div>
+        </div>
+
+        <div class="slide" id="slide-open">
+          <a href="#" class="slide__close" onclick="slideClose()">&times;</a>
+          <ul class="list">
+            <li class="list__item">
+              <a href="#" class="list__link">Models</a>
+            </li>
+            <li class="list__item">
+              <a href="#" class="list__link">Market</a>
+            </li>
+            <li class="list__item"><a href="#" class="list__link">Rent</a></li>
+            <li class="list__item"><a href="#" class="list__link">News</a></li>
+            <li class="list__item">
+              <a href="#" class="btn btn--bold">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <ul class="header__navigation">
+        <li class="header__item">
+          <a href="#" class="nav__link">Instagram</a>
+        </li>
+        <li class="header__item"><a href="#" class="nav__link">Facebook</a></li>
+        <li class="header__item"><a href="#" class="nav__link">Linkedin</a></li>
+      </ul>
+    </header>
+
+    <!-- SECTION MATERIALS -->
+    <section class="materials">
+      <div class="materials__grid">
+        <div class="materials__text-box">
+          <h2 class="heading-secondary">Durable materials</h2>
+          <p class="materials__text">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo
+            provident exercitationem quod sed aperiam quo vitae tempore, quaerat
+            ipsam. Quibusdam ut perspiciatis placeat maxime optio nemo quia
+            aperiam! Atque, aliquid possimus excepturi ab laudantium optio.
+            Laudantium non obcaecati alias. Facere suscipit et nemo totam
+            facilis alias vel provident dicta consequuntur.
+          </p>
+          <a href="#" class="btn btn--bold">Read more</a>
+        </div>
+        <div class="materials__photo">
+          <img
+            src="./img/features-1.png"
+            alt="first Feature"
+            class="materials__img materials__img--1"
+          />
+          <img
+            src="./img/features-3.jpg"
+            alt="second Feature"
+            class="materials__img materials__img--2"
+          />
+          <img
+            src="./img/features-4.jpg"
+            alt="third Feature"
+            class="materials__img materials__img--3"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="innovation">
+      <div class="innovation__grid">
+        <h2 class="heading-secondary heading-secondary--white">Innovation</h2>
+        <p class="innovation__text innovation__text--1">
+          We aim to continuously develop and innovate the EcoCabins, so that the
+          EcoCabins are ultimately sustainable and circular. The condition for
+          this is that the EcoCabins remain affordable with the help of the sun
+          and the wind.
+        </p>
+        <p class="innovation__text innovation__text--2">
+          All EcoCabins have high insulation value, which is produced with
+          sustainable and / or natural materials and have the 'round corners' as
+          a striking external feature, which is made possible by the specific
+          use of materials.
+        </p>
+      </div>
+    </section>
+    <section class="features">
+      <div class="features__grid">
+        <div class="feautres__photo">
+          <img
+            src="./img/features-2.png"
+            alt="Feature 2"
+            class="features__img"
+          />
+        </div>
+
+        <div class="features__text-block">
+          <div class="features__text-box">
+            <h3 class="heading-tertiary">Lorem</h3>
+            <p class="features__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Veritatis, hic.
+            </p>
+          </div>
+          <div class="features__text-box">
+            <h3 class="heading-tertiary">Lorem</h3>
+            <p class="features__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Veritatis, hic.
+            </p>
+          </div>
+          <div class="features__text-box">
+            <h3 class="heading-tertiary">Lorem</h3>
+            <p class="features__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Veritatis, hic.
+            </p>
+          </div>
+          <div class="features__text-box">
+            <h3 class="heading-tertiary">Lorem</h3>
+            <p class="features__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Veritatis, hic.
+            </p>
+          </div>
+          <div class="features__text-box">
+            <h3 class="heading-tertiary">Lorem</h3>
+            <p class="features__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Veritatis, hic.
+            </p>
+          </div>
+          <div class="features__text-box">
+            <h3 class="heading-tertiary">Lorem</h3>
+            <p class="features__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Veritatis, hic.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <a href="#" class="footer__link">info@eco-cabins.com</a>
+      <a href="#"
+        ><img
+          src="./img/Logo/Logo horizontal.svg"
+          alt="Logo of the company"
+          class="footer__logo"
+      /></a>
+      <div class="footer__cookies">
+        <a href="#" class="footer__link">Cookies</a>
+        <a href="#" class="footer__link">Privacy Policy</a>
+      </div>
+    </footer>
+
+    <script>
+      function slideOpen() {
+        document.getElementById('slide-open').style.width = '100%';
+        document.getElementById('slide-open').style.opacity = '1';
+        document.getElementById('slide-open').style.visibility = 'visible';
+      }
+      function slideClose() {
+        document.getElementById('slide-open').style.width = '0%';
+        document.getElementById('slide-open').style.opacity = '0';
+        document.getElementById('slide-open').style.visibility = 'hidden';
+      }
+    </script>
+  </body>
+</html>
