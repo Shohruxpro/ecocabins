@@ -1,0 +1,112 @@
+.header {
+  background-image: url(../img/header-background.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-attachment: fixed;
+
+  position: relative;
+  grid-column: full-start/full-end;
+
+  &__navigation {
+    list-style: none;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    writing-mode: vertical-lr;
+    transform: translateY(-70%);
+
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item {
+    margin-top: 4rem;
+    margin-right: 2rem;
+  }
+}
+
+.content {
+  display: grid;
+  grid-template-rows: 1fr minmax(min-content, 60vh);
+  grid-template-columns:
+    [full-start] minmax(4rem, 1fr) [center-start] repeat(
+      8,
+      [col-start] minmax(min-content, 15rem) [col-end]
+    )
+    [center-end] minmax(4rem, 1fr) [full-end];
+
+  &__grid {
+    grid-row: 2/-1;
+    grid-column: center-start/center-end;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(min-content, 50%));
+
+    grid-column-gap: 13rem;
+    align-items: center;
+
+    @media only screen and (max-width: $bp-small) {
+      grid-column-gap: 0;
+      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    }
+  }
+  &__text-box {
+    display: grid;
+    grid-template-rows: 1fr minmax(min-content, max-content);
+    grid-row-gap: 1.2rem;
+
+    @media only screen and (max-width: $bp-tiny) {
+      align-self: end;
+    }
+  }
+  &__text {
+    font-weight: 500;
+    font-size: 1.8rem;
+    opacity: 0.8;
+  }
+  &__btn-box {
+    justify-self: center;
+
+    @media only screen and (max-width: $bp-tiny) {
+      justify-self: start;
+    }
+  }
+  &__btn {
+    display: flex;
+    align-items: center;
+    position: relative;
+    &:link,
+    &:visited {
+      text-decoration: none;
+      color: inherit;
+      font-size: $default-font-size;
+      font-weight: 500;
+    }
+    &::before {
+      content: '' url(../img/Shape.png);
+      background-size: cover;
+      height: 3rem;
+      width: 3rem;
+      background-color: $color-primary;
+      border-radius: 50%;
+      box-shadow: 0px 0.2rem 2rem rgba(0, 0, 0, 0.5);
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 1rem;
+      z-index: 100;
+    }
+    &::after {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      left: -0.5rem;
+      height: 4rem;
+      width: 4rem;
+      background-color: rgba($color-primary, 0.5);
+      border-radius: 50%;
+      animation: scaleUp 2s infinite;
+    }
+  }
+}
