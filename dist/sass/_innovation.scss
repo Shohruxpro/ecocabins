@@ -1,0 +1,33 @@
+.innovation {
+  background-color: $color-dark-green;
+  padding: 8rem 0rem;
+  grid-column: full-start/full-end;
+
+  display: grid;
+  grid-template-columns:
+    [full-start] minmax(4rem, 1fr) [center-start] repeat(
+      8,
+      [col-start] minmax(min-content, 15rem) [col-end]
+    )
+    [center-end] minmax(4rem, 1fr) [full-end];
+
+  &__grid {
+    grid-column: center-start/center-end;
+    align-content: center;
+
+    display: grid;
+    grid-template-rows: min-content max-content;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    grid-column-gap: 4rem;
+    grid-row-gap: 1rem;
+  }
+  &__text {
+    opacity: 0.7;
+    font-size: 1.4rem;
+    grid-row: 2/3;
+
+    &--2 {
+      grid-row: 2/3;
+    }
+  }
+}

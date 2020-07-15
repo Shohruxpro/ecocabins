@@ -1,0 +1,29 @@
+.footer {
+  background-color: $color-dark-green;
+  padding: 4rem 0;
+
+  grid-column: full-start/full-end;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  align-items: center;
+  justify-items: center;
+
+  &__link {
+    &:link,
+    &:visited {
+      text-decoration: none;
+      color: inherit;
+      opacity: 0.6;
+      font-size: $default-font-size;
+      transition: opacity 0.2s;
+    }
+    &:hover,
+    &:active {
+      opacity: 1;
+    }
+    &:last-child {
+      margin-left: 3rem;
+    }
+  }
+}

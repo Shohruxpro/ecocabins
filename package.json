@@ -13,6 +13,7 @@
     "build:css": "npm-run-all compile:sass prefix:css compress:css"
   },
   "author": "shohruxpro",
+  "homepage": "https://shohruxpro.github.io/ecocabins",
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^9.8.5",

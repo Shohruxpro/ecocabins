@@ -1,0 +1,24 @@
+%heading {
+  font-weight: 900;
+  font-family: 'Merriweather', sans-serif;
+}
+
+.heading-primary {
+  @extend %heading;
+  font-size: 3rem;
+}
+.heading-secondary {
+  @extend %heading;
+  font-size: 3rem;
+  color: $color-dark-green;
+
+  &--white {
+    color: $color-primary;
+  }
+}
+
+.heading-tertiary {
+  @extend %heading;
+  font-size: 1.8rem;
+  color: $color-dark-green;
+}
